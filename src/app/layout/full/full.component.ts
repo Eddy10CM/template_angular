@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class FullComponent implements OnInit {
+export class FullComponent {
 
-  constructor() { }
+  public sidebarMinimized = false;
+  public navItems = [];
 
-  ngOnInit(): void {
+  toggleMinimize(e: any) {
+    this.sidebarMinimized = e;
   }
 
 }
