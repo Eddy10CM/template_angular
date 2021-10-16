@@ -1,23 +1,7 @@
-<p>home works!</p>
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus deserunt perferendis quas optio, tempore nisi vitae doloribus numquam voluptates, veritatis dolorum vero et voluptatibus modi soluta expedita, architecto corrupti.
-</p>
-
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus deserunt perferendis quas optio, tempore nisi vitae doloribus numquam voluptates, veritatis dolorum vero et voluptatibus modi soluta expedita, architecto corrupti.
-</p>
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus deserunt perferendis quas optio, tempore nisi vitae doloribus numquam voluptates, veritatis dolorum vero et voluptatibus modi soluta expedita, architecto corrupti.
-</p>
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus deserunt perferendis quas optio, tempore nisi vitae doloribus numquam voluptates, veritatis dolorum vero et voluptatibus modi soluta expedita, architecto corrupti.
-</p>
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus deserunt perferendis quas optio, tempore nisi vitae doloribus numquam voluptates, veritatis dolorum vero et voluptatibus modi soluta expedita, architecto corrupti.
-</p>
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus deserunt perferendis quas optio, tempore nisi vitae doloribus numquam voluptates, veritatis dolorum vero et voluptatibus modi soluta expedita, architecto corrupti.
-</p>
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus deserunt perferendis quas optio, tempore nisi vitae doloribus numquam voluptates, veritatis dolorum vero et voluptatibus modi soluta expedita, architecto corrupti.
-</p>
+<div class="animated fadeIn" style="height: auto;">
+    <div class="row" *ngIf="rowsHome.length > 0">
+        <div class="col-lg-12">
+            <app-table [title]="'Ejemplo'" [columns]="columnsHome" [rows]="rowsHome"></app-table>
+        </div>
+    </div>
+</div>
