@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 import { IColumns } from '../../models/i-columns';
 import { IRows } from '../../models/i-rows';
@@ -12,6 +12,7 @@ export class TableComponent implements OnChanges {
   @Input() title!: string;
   @Input() columns!: IColumns[];
   @Input() rows!: IRows[];
+  @Output() delegetRow: EventEmitter<any> = new EventEmitter();
 
   rowLocal!: any[];
   totalItems = 1;
@@ -44,5 +45,9 @@ export class TableComponent implements OnChanges {
 
   pageChanged(event: PageChangedEvent): void {
     this.page = event.page;
+  }
+
+  clickRow(row: any): void{
+    this.delegetRow.emit(row);
   }
 }

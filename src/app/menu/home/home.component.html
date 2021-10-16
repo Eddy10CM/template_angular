@@ -1,7 +1,14 @@
 <div class="animated fadeIn" style="height: auto;">
     <div class="row" *ngIf="rowsHome.length > 0">
         <div class="col-lg-12">
-            <app-table [title]="'Ejemplo'" [columns]="columnsHome" [rows]="rowsHome"></app-table>
+            <app-table [title]="'Test'" [columns]="columnsHome" [rows]="rowsHome"></app-table>
+        </div>
+        <div class="col-lg-12">
+            <app-table #test1 [title]="'Test 1'" [columns]="columnsHome" [rows]="rowsHome" (delegetRow)="eventoRow($event)"></app-table>
+        </div>
+        <div class="col-lg-12">
+            <app-table #test2 [title]="'Test 2'" [columns]="columnsInfo" [rows]="rowsInfo2" (delegetRow)="eventoRow($event)">
+            </app-table>
         </div>
     </div>
 </div>

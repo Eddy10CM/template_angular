@@ -17,7 +17,7 @@
 
             <tbody>
                 <tr *ngFor="let row of rowLocal">
-                    <td *ngFor=" let r of row">
+                    <td *ngFor=" let r of row" (click)="clickRow(row)">
                         {{ r.value }}
                     </td>
                 </tr>
