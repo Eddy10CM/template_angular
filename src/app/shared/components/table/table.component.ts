@@ -18,29 +18,27 @@ export class TableComponent implements OnChanges {
   totalItems = 1;
   currentPage = 1;
   page?: number;
-  
 
   constructor() { }
 
   ngOnChanges(): void {
-    console.log(this.rows);
     this.refreshInfo();
     this.totalItems = this.rows.length;
   }
 
-  refreshInfo() {
+  refreshInfo(): any {
     this.rowLocal = this.rows.map((row) => {
-      let r = [];
-      for( const key in row) {
+      const r = [];
+      // tslint:disable-next-line: forin
+      for (const key in row) {
         const info = {
-          key: key,
+          key,
           value: row[key]
-        }
+        };
         r.push(info);
       }
       return r;
     });
-    console.log(this.rowLocal);
   }
 
   pageChanged(event: PageChangedEvent): void {

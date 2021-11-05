@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { INavData } from '@coreui/angular';
 import { AuthService } from '../../shared/services/auth.service';
+import { TypeMenuService } from '../../shared/services/type-menu.service';
 
 @Component({
   selector: 'app-full',
@@ -10,13 +12,13 @@ import { AuthService } from '../../shared/services/auth.service';
 export class FullComponent {
 
   public sidebarMinimized = false;
-  public navItems = [];
+  public navItems: INavData[] = [];
 
-  constructor(public auth: AuthService) {
-    console.log("🚀 ~ file: full.component.ts ~ line 16 ~ FullComponent ~ constructor ~ auth", auth.getUser());
+  constructor(public auth: AuthService, private menu: TypeMenuService) {
+    this.navItems = menu.getMenu();
   }
 
-  toggleMinimize(e: any) {
+  toggleMinimize(e: any): void {
     this.sidebarMinimized = e;
   }
 
