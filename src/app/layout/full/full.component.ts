@@ -15,6 +15,8 @@ export class FullComponent {
   public navItems: INavData[] = [];
 
   constructor(public auth: AuthService, private menu: TypeMenuService) {
+    const theme = Theme.DARK;
+    document.body.classList.add(theme);
     this.navItems = menu.getMenu();
   }
 
@@ -22,4 +24,15 @@ export class FullComponent {
     this.sidebarMinimized = e;
   }
 
+  changeTheme(): void {
+    console.log('test')
+    const theme = Theme.LIGHT;
+    document.body.classList.add(theme);
+  }
+
+}
+
+enum Theme {
+  LIGHT = 'light',
+  DARK = 'dark'
 }

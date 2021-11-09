@@ -1,6 +1,39 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 @import "~@coreui/coreui/scss/coreui";
+
+@import "/src/app/themes/dark.scss";
+@import "/src/app/themes/light.scss";
+
 body,
 html {
     height: 100%;
+}
+
+@function map-get-value($map, $key) {
+    @if map-has-key($map, $key) {
+        @return map-get($map, $key);
+    }
+    @else {
+        @error "ERROR: Specified key #{$key} does not exist in the mapping #{map-get($map, name)}";
+    }
+}
+
+@mixin set-theme($map) {
+    .layout {
+        background-color: map-get-value($map, background-color);
+    }
+    .text {
+        color: map-get-value($map, text-color);
+    }
+    .line {
+        border: map-get-value($map, border-bottom);
+    }
+}
+
+.dark {
+    @include set-theme($dark-value-map);
+}
+
+.light {
+    @include set-theme($ligth-value-map);
 }

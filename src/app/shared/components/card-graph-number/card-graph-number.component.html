@@ -1,0 +1,35 @@
+<ngx-flip [flip]="flipped" *ngIf="chartData.length > 0; else loading">
+
+    <div class="card text-white bg-info" front>
+        <div class="card-body pb-0">
+            <button type="button" class="btn btn-transparent p-0 float-right" (click)="toogleView()">
+                <i class="bi bi-chevron-compact-left"></i>
+            </button>
+            <div class="text-value">9.823</div>
+            <div>Members online</div>
+        </div>
+        <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+            <canvas baseChart class="chart" [datasets]="chartData" [labels]="chartLabel"
+                [options]="lineChart2Options" [colors]="lineChart2Colours" [legend]="lineChart2Legend"
+                [chartType]="lineChart2Type"></canvas>
+        </div>
+    </div>
+
+    <div class="card text-white bg-success" back (click)="toogleView()">
+        <div class="card-body pb-0">
+            <button type="button" class="btn btn-transparent p-0 float-right">
+                <i class="bi bi-chevron-compact-right"></i>
+            </button>
+            <div class="text-value">9.823</div>
+            <div>Members online</div>
+        </div>
+        <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+            <canvas baseChart class="chart" [datasets]="chartData" [labels]="chartLabel"
+                [options]="lineChart2Options" [colors]="lineChart2Colours" [legend]="lineChart2Legend"
+                [chartType]="lineChart2Type"></canvas>
+        </div>
+    </div>
+</ngx-flip>
+<ng-template #loading>
+    Cargando...
+</ng-template>

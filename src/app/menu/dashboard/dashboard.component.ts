@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
+import { ChartSimple } from 'src/app/shared/models/chart-simple';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,13 +10,14 @@ import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 })
 export class DashboardComponent implements OnInit {
 
-  radioModel: string = 'Month';
+  radioModel = 'Month';
 
   // lineChart1
-  public lineChart1Data: Array<any> = [
+  public lineChart1Data: Array<ChartSimple> = [
     {
       data: [65, 59, 84, 84, 51, 55, 40],
-      label: 'Series A'
+      label: 'Series A',
+      barPercentage: 0.6
     }
   ];
   public lineChart1Labels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
@@ -179,8 +181,7 @@ export class DashboardComponent implements OnInit {
   public barChart1Data: Array<any> = [
     {
       data: [78, 81, 80, 45, 34, 12, 40, 78, 81, 80, 45, 34, 12, 40, 12, 40],
-      label: 'Series A',
-      barPercentage: 0.6,
+      label: 'Series A'
     }
   ];
   public barChart1Labels: Array<any> = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16'];
@@ -375,7 +376,7 @@ export class DashboardComponent implements OnInit {
   public brandBoxChartLegend = false;
   public brandBoxChartType = 'line';
 
-  public random(min: number, max: number) {
+  public random(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
