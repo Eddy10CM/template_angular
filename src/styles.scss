@@ -26,7 +26,57 @@ html {
         color: map-get-value($map, text-color);
     }
     .line {
-        border: map-get-value($map, border-bottom);
+        border: map-get-value($map, border-line);
+    }
+    .line-right {
+        border-right: map-get-value($map, border-line);
+    }
+    .line-bottom {
+        border-bottom: map-get-value($map, border-line);
+    }
+    .breadcrumb {
+        background-color: map-get-value($map, background-color) !important;
+        border: map-get-value($map, border-line);
+        color: map-get-value($map, text-color);
+    }
+    .footer-card {
+        border-top: map-get-value($map, border-line);
+        background-color: map-get-value($map, background-footer)
+    }
+    .brand-card {
+        border: map-get-value($map, border-line)
+    }
+    .brand-card-body {
+        background-color: map-get-value($map, background-color);
+        color: map-get-value($map, text-color);
+
+        > *:not(:last-child) {
+            border-right: map-get-value($map, border-line);
+          }
+    }
+
+    .table {
+        border: map-get-value($map, border-line);
+        color: map-get-value($map, text-color);
+    }
+    
+    .table-outline {
+        border: map-get-value($map, border-line) !important;
+    }
+
+    .table .thead-light th {
+        color: map-get-value($map, text-color);
+        background-color: map-get-value($map, background-footer);
+        border-color: map-get-value($map, background-color);
+    }
+
+    .table thead th {
+        vertical-align: bottom;
+        border-bottom: map-get-value($map, border-table);
+    }
+
+    .table th {
+        border-top: map-get-value($map, border-line);
     }
 }
 
