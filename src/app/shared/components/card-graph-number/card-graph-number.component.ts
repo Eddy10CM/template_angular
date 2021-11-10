@@ -5,14 +5,15 @@ import { ChartSimple } from '../../models/chart-simple';
 
 @Component({
   selector: 'app-card-graph-number',
-  templateUrl: './card-graph-number.component.html',
-  styleUrls: ['./card-graph-number.component.scss']
+  templateUrl: './card-graph-number.component.html'
 })
 export class CardGraphNumberComponent {
 
 
   @Input() chartData: Array<ChartSimple> = [];
   @Input() chartLabel: Array<string> = [];
+  @Input() total: number | string;
+  @Input() title: string;
   flipped = false;
 
 

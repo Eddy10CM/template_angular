@@ -5,8 +5,8 @@
             <button type="button" class="btn btn-transparent p-0 float-right" (click)="toogleView()">
                 <i class="bi bi-chevron-compact-left"></i>
             </button>
-            <div class="text-value">9.823</div>
-            <div>Members online</div>
+            <div class="text-value">{{ total }}</div>
+            <div>{{ title }}</div>
         </div>
         <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
             <canvas baseChart class="chart" [datasets]="chartData" [labels]="chartLabel"

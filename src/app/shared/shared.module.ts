@@ -8,12 +8,17 @@ import { ChartsModule } from 'ng2-charts';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { FlipModule } from 'ngx-flip';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { CardGrapGaugeComponent } from './components/card-grap-gauge/card-grap-gauge.component';
+import { DraggerComponent } from './components/card-grap-gauge/dragger/dragger.component';
 
 
 @NgModule({
   declarations: [
     TableComponent,
-    CardGraphNumberComponent
+    CardGraphNumberComponent,
+    CardGrapGaugeComponent,
+    DraggerComponent
   ],
   imports: [
     CommonModule,
@@ -24,11 +29,13 @@ import { FlipModule } from 'ngx-flip';
     ChartsModule,
     BsDropdownModule,
     FlipModule,
-    ButtonsModule.forRoot()
+    ButtonsModule.forRoot(),
+    TabsModule.forRoot(),
   ],
   exports: [
     TableComponent,
-    CardGraphNumberComponent
+    CardGraphNumberComponent,
+    CardGrapGaugeComponent
   ]
 })
 export class SharedModule { }
