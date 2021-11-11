@@ -12,6 +12,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { CardGrapGaugeComponent } from './components/card-grap-gauge/card-grap-gauge.component';
 import { DraggerComponent } from './components/card-grap-gauge/dragger/dragger.component';
 import { CardGrapChartJsComponent } from './components/card-grap-chart-js/card-grap-chart-js.component';
+import { CardNumberComponent } from './components/card-number/card-number.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CardGrapChartJsComponent } from './components/card-grap-chart-js/card-g
     CardGraphNumberComponent,
     CardGrapGaugeComponent,
     DraggerComponent,
-    CardGrapChartJsComponent
+    CardGrapChartJsComponent,
+    CardNumberComponent
   ],
   imports: [
     CommonModule,
