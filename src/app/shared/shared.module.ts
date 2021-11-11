@@ -1,3 +1,4 @@
+import { CardNumberComponent } from './components/card-number/card-number.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TableComponent } from './components/table/table.component';
@@ -12,7 +13,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { CardGrapGaugeComponent } from './components/card-grap-gauge/card-grap-gauge.component';
 import { DraggerComponent } from './components/card-grap-gauge/dragger/dragger.component';
 import { CardGrapChartJsComponent } from './components/card-grap-chart-js/card-grap-chart-js.component';
-import { CardNumberComponent } from './components/card-number/card-number.component';
+
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { CardNumberComponent } from './components/card-number/card-number.compon
     TableComponent,
     CardGraphNumberComponent,
     CardGrapGaugeComponent,
-    CardGrapChartJsComponent
+    CardGrapChartJsComponent,
+    CardNumberComponent
   ]
 })
 export class SharedModule { }

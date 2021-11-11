@@ -14,6 +14,7 @@ import {
   AppHeaderModule,
   AppFooterModule,
   AppSidebarModule,
+  
 } from '@coreui/angular';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
