@@ -2,6 +2,7 @@ import { Component, Input} from '@angular/core';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { ChartSimple } from '../../models/chart-simple';
+import { ChartOptions } from 'chart.js';
 
 @Component({
   selector: 'app-card-graph-number',
@@ -17,7 +18,7 @@ export class CardGraphNumberComponent {
   flipped = false;
 
 
-  public lineChart2Options: any = {
+  public lineChart2Options: ChartOptions = {
     tooltips: {
       enabled: false,
       custom: CustomTooltips
@@ -57,6 +58,11 @@ export class CardGraphNumberComponent {
     },
     legend: {
       display: false
+    },
+    plugins: {
+      datalabels: {
+        display: false
+      }
     }
   };
 
