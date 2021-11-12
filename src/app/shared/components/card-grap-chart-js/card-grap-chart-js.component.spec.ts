@@ -1,25 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { CardGrapChartJsComponent } from './card-grap-chart-js.component';
+import { CardGrapChartJsComponent } from './card-grap-chart-js.component'
 
 describe('CardGrapChartJsComponent', () => {
-  let component: CardGrapChartJsComponent;
-  let fixture: ComponentFixture<CardGrapChartJsComponent>;
+	let component: CardGrapChartJsComponent
+	let fixture: ComponentFixture<CardGrapChartJsComponent>
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ CardGrapChartJsComponent ]
-    })
-    .compileComponents();
-  });
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			declarations: [CardGrapChartJsComponent],
+		}).compileComponents()
+	})
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(CardGrapChartJsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(CardGrapChartJsComponent)
+		component = fixture.componentInstance
+		fixture.detectChanges()
+	})
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+	it('should create', () => {
+		expect(component).toBeTruthy()
+	})
+})

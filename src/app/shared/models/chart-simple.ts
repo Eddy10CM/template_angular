@@ -1,5 +1,5 @@
 export class ChartSimple {
-    data: Array<number>;
-    label: string;
-    barPercentage?: number;
+	data: Array<number>
+	label: string
+	barPercentage?: number
 }

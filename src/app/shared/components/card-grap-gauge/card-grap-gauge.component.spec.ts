@@ -1,25 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { CardGrapGaugeComponent } from './card-grap-gauge.component';
+import { CardGrapGaugeComponent } from './card-grap-gauge.component'
 
 describe('CardGrapGaugeComponent', () => {
-  let component: CardGrapGaugeComponent;
-  let fixture: ComponentFixture<CardGrapGaugeComponent>;
+	let component: CardGrapGaugeComponent
+	let fixture: ComponentFixture<CardGrapGaugeComponent>
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ CardGrapGaugeComponent ]
-    })
-    .compileComponents();
-  });
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			declarations: [CardGrapGaugeComponent],
+		}).compileComponents()
+	})
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(CardGrapGaugeComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(CardGrapGaugeComponent)
+		component = fixture.componentInstance
+		fixture.detectChanges()
+	})
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+	it('should create', () => {
+		expect(component).toBeTruthy()
+	})
+})

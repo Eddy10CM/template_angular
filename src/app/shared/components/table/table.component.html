@@ -1,33 +1,37 @@
 <div class="card">
-    <div class="card-header">
-        <i class="fa fa-align-justify">
-            {{ title }}
-        </i>
-    </div>
+	<div class="card-header">
+		<i class="fa fa-align-justify">
+			{{ title }}
+		</i>
+	</div>
 
-    <div class="card-body">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th *ngFor="let column of columns">
-                        {{ column.header }}
-                    </th>
-                </tr>
-            </thead>
+	<div class="card-body">
+		<table class="table">
+			<thead>
+				<tr>
+					<th *ngFor="let column of columns">
+						{{ column.header }}
+					</th>
+				</tr>
+			</thead>
 
-            <tbody>
-                <tr *ngFor="let row of rowLocal">
-                    <td *ngFor=" let r of row" (click)="clickRow(row)">
-                        {{ r.value }}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+			<tbody>
+				<tr *ngFor="let row of rowLocal">
+					<td *ngFor="let r of row" (click)="clickRow(row)">
+						{{ r.value }}
+					</td>
+				</tr>
+			</tbody>
+		</table>
 
-        <div class="row">
-            <div class="col-xs-12 col-12">
-                <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
-            </div>
-        </div>
-    </div>
+		<div class="row">
+			<div class="col-xs-12 col-12">
+				<pagination
+					[totalItems]="totalItems"
+					[(ngModel)]="currentPage"
+					(pageChanged)="pageChanged($event)"
+				></pagination>
+			</div>
+		</div>
+	</div>
 </div>
