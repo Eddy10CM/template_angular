@@ -50,5 +50,5 @@ export const LINE_CHART_OPTIONS: ChartOptions = {
         datalabels: {
             display: false,
         },
-    },
+    }
 }

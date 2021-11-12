@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
 		})
 
 		const data: ChartSimple = new ChartSimple({
-			data: [10, 45],
+			data: [10, 25],
 			label: 'Serie A'
 		});
 		this.lineChart2Data.push(data);
