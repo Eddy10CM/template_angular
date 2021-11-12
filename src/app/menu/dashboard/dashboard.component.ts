@@ -13,13 +13,12 @@ export class DashboardComponent implements OnInit {
   radioModel = 'Month';
 
   // lineChart1
-  public lineChart1Data: Array<ChartSimple> = [
-    {
-      data: [65, 59, 84, 84, 51, 55, 40],
+  data: ChartSimple = new ChartSimple({
+    data: [65, 59, 84, 84, 51, 55, 40],
       label: 'Series A',
       barPercentage: 0.6
-    }
-  ];
+  })
+  public lineChart1Data: Array<ChartSimple> = [];
   public lineChart1Labels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   public lineChart1Options: any = {
     tooltips: {
@@ -381,6 +380,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.lineChart1Data.push(this.data)
     // generate random values for mainChart
     for (let i = 0; i <= this.mainChartElements; i++) {
       this.mainChartData1.push(this.random(50, 200));
