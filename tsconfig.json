@@ -2,11 +2,11 @@
 {
 	"compileOnSave": false,
 	"angularCompilerOptions": {
-		"strictTemplates": true
+		"strictTemplates": false
 	},
 	"compilerOptions": {
-		"forceConsistentCasingInFileNames": true,
-		"strict": true,
+		"forceConsistentCasingInFileNames": false,
+		"strict": false,
 		"baseUrl": "./",
 		"outDir": "./dist/out-tsc",
 		"sourceMap": true,

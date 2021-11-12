@@ -11,7 +11,8 @@ import { FlipModule } from 'ngx-flip'
 import { TabsModule } from 'ngx-bootstrap/tabs'
 import { CardGrapGaugeComponent } from './components/card-grap-gauge/card-grap-gauge.component'
 import { DraggerComponent } from './components/card-grap-gauge/dragger/dragger.component'
-import { CardGrapChartJsComponent } from './components/card-grap-chart-js/card-grap-chart-js.component'
+import { CardGrapChartJsComponent } from './components/card-grap-chart-js/card-grap-chart-js.component';
+import { CardGrapFooterComponent } from './components/card-grap-footer/card-grap-footer.component'
 
 @NgModule({
 	declarations: [
@@ -20,6 +21,7 @@ import { CardGrapChartJsComponent } from './components/card-grap-chart-js/card-g
 		CardGrapGaugeComponent,
 		DraggerComponent,
 		CardGrapChartJsComponent,
+		CardGrapFooterComponent,
 	],
 	imports: [
 		CommonModule,
@@ -38,6 +40,7 @@ import { CardGrapChartJsComponent } from './components/card-grap-chart-js/card-g
 		CardGraphNumberComponent,
 		CardGrapGaugeComponent,
 		CardGrapChartJsComponent,
+		CardGrapFooterComponent
 	],
 })
 export class SharedModule {}

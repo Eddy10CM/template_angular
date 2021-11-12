@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core'
-import { IColumns } from 'src/app/shared/models/i-columns'
-import { IRows } from 'src/app/shared/models/i-rows'
-import { AuthService } from '../../shared/services/auth.service'
-import { TableComponent } from '../../shared/components/table/table.component'
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IColumns } from 'src/app/shared/models/i-columns';
+import { IRows } from 'src/app/shared/models/i-rows';
+import { AuthService } from '../../shared/services/auth.service';
+import { TableComponent } from '../../shared/components/table/table.component';
+import { ChartSimple } from 'src/app/shared/models/class/chart-simple';
 
 @Component({
 	selector: 'app-home',
@@ -18,6 +19,9 @@ export class HomeComponent implements OnInit {
 	rowsInfo2: IRows[] = []
 
 	rows = [{ nombre: 'Eddy' }, { nombre: 'Eddy' }]
+
+	lineChart2Data: ChartSimple[] = [];
+	lineChart1Labels: string[] = ['Enero', 'Febrero'];
 
 	constructor(private userAuth: AuthService) {}
 
@@ -35,6 +39,12 @@ export class HomeComponent implements OnInit {
 			}
 			this.rowsHome.push(row)
 		})
+
+		const data: ChartSimple = new ChartSimple({
+			data: [10, 45],
+			label: 'Serie A'
+		});
+		this.lineChart2Data.push(data);
 	}
 
 	eventoRow(row: any[]) {

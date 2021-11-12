@@ -1,70 +1,21 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, OnChanges } from '@angular/core'
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
-import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips'
-import { ChartSimple } from '../../models/chart-simple'
+import { ChartSimple } from '../../models/class/chart-simple'
 import { ChartOptions } from 'chart.js'
+import { MoreGraph } from '../../models/class/more-graph';
 
 @Component({
 	selector: 'app-card-graph-number',
 	templateUrl: './card-graph-number.component.html',
 })
-export class CardGraphNumberComponent {
+export class CardGraphNumberComponent implements OnChanges {
 	@Input() chartData: Array<ChartSimple> = []
 	@Input() chartLabel: Array<string> = []
 	@Input() total: number | string
 	@Input() title: string
 	flipped = false
 
-	public lineChart2Options: ChartOptions = {
-		tooltips: {
-			enabled: false,
-			custom: CustomTooltips,
-		},
-		maintainAspectRatio: false,
-		scales: {
-			xAxes: [
-				{
-					gridLines: {
-						color: 'transparent',
-						zeroLineColor: 'transparent',
-					},
-					ticks: {
-						fontSize: 2,
-						fontColor: 'transparent',
-					},
-				},
-			],
-			yAxes: [
-				{
-					display: false,
-					ticks: {
-						display: false,
-						min: 1 - 5,
-						max: 34 + 5,
-					},
-				},
-			],
-		},
-		elements: {
-			line: {
-				tension: 0.00001,
-				borderWidth: 1,
-			},
-			point: {
-				radius: 4,
-				hitRadius: 10,
-				hoverRadius: 4,
-			},
-		},
-		legend: {
-			display: false,
-		},
-		plugins: {
-			datalabels: {
-				display: false,
-			},
-		},
-	}
+	public lineChart2Options: ChartOptions;
 
 	public lineChart2Colours: Array<any> = [
 		{
@@ -78,6 +29,11 @@ export class CardGraphNumberComponent {
 	public lineChart2Type = 'line'
 
 	constructor() {}
+
+	ngOnChanges() {
+		const chart: MoreGraph = new MoreGraph('line');
+		this.lineChart2Options = chart.getChartOptions();
+	}
 
 	toogleView(): void {
 		this.flipped = !this.flipped
