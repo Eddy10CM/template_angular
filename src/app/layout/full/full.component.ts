@@ -11,9 +11,11 @@ import { TypeMenuService } from '../../shared/services/type-menu.service'
 export class FullComponent {
 	public sidebarMinimized = false
 	public navItems: INavData[] = []
+	public themeList: string[] = ['dark', 'light']
+	public theme: string = 'dark'
 
 	constructor(public auth: AuthService, private menu: TypeMenuService) {
-		const theme = Theme.DARK
+		const theme = this.themeList[0]
 		document.body.classList.add(theme)
 		this.navItems = menu.getMenu()
 	}
@@ -22,14 +24,12 @@ export class FullComponent {
 		this.sidebarMinimized = e
 	}
 
-	changeTheme(): void {
-		console.log('test')
-		const theme = Theme.LIGHT
+	changeTheme(theme: string): void {
+		for (let index = 0; index < this.themeList.length; index++) {
+			const element = this.themeList[index]
+			document.body.classList.remove(element)
+		}
 		document.body.classList.add(theme)
+		this.theme = theme
 	}
-}
-
-enum Theme {
-	LIGHT = 'light',
-	DARK = 'dark',
 }

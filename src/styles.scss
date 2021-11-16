@@ -17,6 +17,14 @@ html {
 	}
 }
 
+.capitalize-first {
+	text-transform: lowercase;
+}
+
+.capitalize-first::first-letter {
+	text-transform: uppercase;
+}
+
 @mixin set-theme($map) {
 	body {
 		background-color: map-get-value($map, background-color);
