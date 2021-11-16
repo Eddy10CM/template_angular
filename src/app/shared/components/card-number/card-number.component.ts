@@ -10,10 +10,10 @@ export class CardNumber implements OnInit {
 	name = 'Title'
 	value = '0'
 	units = ''
-	kpi: Kpi = new Kpi('', '', '', '')
-	kpi1: Kpi = new Kpi('kpi1', 'Kpi1', '10', '')
-	kpi2: Kpi = new Kpi('kpi2', 'Kpi2', '20', '')
-	kpi3: Kpi = new Kpi('kpi3', 'Kpi3', '30', '')
+	kpi: Kpi = new Kpi({})
+	kpi1: Kpi = new Kpi({ label: 'Kpi2', data: '20', units: '' })
+	kpi2: Kpi = new Kpi({ label: 'Kpi3', data: '30', units: '' })
+	kpi3: Kpi = new Kpi({ label: 'Kpi4', data: '40', units: '' })
 
 	@Input() kpiList: any[] = [this.kpi1, this.kpi2, this.kpi3]
 
