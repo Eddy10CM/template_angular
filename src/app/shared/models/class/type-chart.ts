@@ -2,6 +2,7 @@ import { ChartOptions } from "chart.js";
 import { LINE_CHART_OPTIONS } from "../../constant/line-chart";
 import { BAR_CHART_OPTIONS } from "../../constant/bar-chart";
 
+
 export abstract class TypeChart {
     typeChart: string;
     constructor(typeChart: string) {

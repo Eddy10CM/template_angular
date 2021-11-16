@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core'
-
+import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
 import { ChartSimple } from '../../models/class/chart-simple'
 import { ChartOptions } from 'chart.js'
 import { MoreGraph } from '../../models/class/more-graph';
@@ -25,14 +25,13 @@ export class CardGraphNumberComponent implements OnChanges {
 	constructor() {
 	}
 
-	ngOnChanges() {
+	ngOnChanges(): void {
 		console.log(this.chartData);
 		const chart: MoreGraph = new MoreGraph('bar');
 		this.lineChart2Options = chart.getChartOptions();
 		this.lineChart2Colours = chart.generateGraph();
 		this.lineChart2Options.plugins.datalabels.display = false;
 	}
-
 	toogleView(): void {
 		this.flipped = !this.flipped
 	}

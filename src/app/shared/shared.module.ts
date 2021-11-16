@@ -1,3 +1,4 @@
+import { CardNumber } from './components/card-number/card-number.component';
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { TableComponent } from './components/table/table.component'
@@ -22,6 +23,7 @@ import { CardGrapFooterComponent } from './components/card-grap-footer/card-grap
 		DraggerComponent,
 		CardGrapChartJsComponent,
 		CardGrapFooterComponent,
+	    CardNumber,
 	],
 	imports: [
 		CommonModule,
@@ -40,7 +42,8 @@ import { CardGrapFooterComponent } from './components/card-grap-footer/card-grap
 		CardGraphNumberComponent,
 		CardGrapGaugeComponent,
 		CardGrapChartJsComponent,
-		CardGrapFooterComponent
+		CardGrapFooterComponent,
+	    CardNumber
 	],
 })
 export class SharedModule {}

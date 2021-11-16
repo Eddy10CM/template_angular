@@ -18,7 +18,8 @@
 	[asideMenuToggler]="'lg'"
 >
 	<ul class="nav navbar-nav d-md-down-none">
-		<li class="nav-item px-3" (click)="changeTheme()">
+		<li class="nav-item px-3">
+		<li class="nav-item px-3">
 			<a class="nav-link">Dashboard</a>
 		</li>
 		<li class="nav-item px-3">
@@ -28,6 +29,23 @@
 			<a class="nav-link">Settings</a>
 		</li>
 	</ul>
+  <div class="btn-group mx-auto header" dropdown>
+    <button
+      type="button"
+      class="btn btn-transparent btn-lg dropdown-toggle p-0 header text capitalize-first"
+      dropdownToggle
+    >
+      {{ theme }}
+    </button>
+    <div class="dropdown-menu" *dropdownMenu>
+      <a
+        class="dropdown-item"
+        *ngFor="let item of themeList; let i = index"
+        (click)="changeTheme(item)"
+        >{{ item }}</a>
+    </div>
+  </div>
+
 	<ul class="nav navbar-nav ml-auto">
 		<li class="nav-item d-md-down-none">
 			<a class="nav-link"

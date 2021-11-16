@@ -5,7 +5,6 @@ export class MoreGraph extends TypeChart {
     constructor(typeGraph: string) {
         super(typeGraph);
     }
-
     generateGraph(): Array<any> {
         let colors = [];
         switch(this.typeChart) {

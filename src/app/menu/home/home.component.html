@@ -1,6 +1,5 @@
-
-
 <div class="animated fadeIn">
+<div class="animated fadeIn container-daimler" >
 	<div class="row">
 		<div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
 			<app-card-grap-chart-js></app-card-grap-chart-js>
@@ -8,6 +7,9 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-6 col-lg-3" *ngIf="lineChart2Data.length > 0" >
+
+	<div class="row">
+		<div class="col-sm-6 col-lg-3">
 			<app-card-graph-number
 				[chartData]="lineChart2Data"
 				[chartLabel]="lineChart1Labels"

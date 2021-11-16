@@ -19,11 +19,11 @@ export class HomeComponent implements OnInit {
 	rowsInfo2: IRows[] = []
 
 	rows = [{ nombre: 'Eddy' }, { nombre: 'Eddy' }]
+
 	
 
 	lineChart2Data: ChartSimple[] = [];
 	lineChart1Labels: string[] = [];
-
 	constructor(private userAuth: AuthService) {}
 
 	ngOnInit(): void {
@@ -55,7 +55,6 @@ export class HomeComponent implements OnInit {
 			'June',
 			'July',
 		];
-		
 	}
 
 	eventoRow(row: any[]) {
