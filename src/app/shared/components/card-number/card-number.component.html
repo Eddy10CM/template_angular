@@ -28,11 +28,10 @@
 			<div class="dropdown-menu" *dropdownMenu>
 				<a
 					class="dropdown-item"
-					id="{{ item._id }}"
 					*ngFor="let item of kpiList; let i = index"
+					id="{{ item._id }}"
 					(click)="setKpi(i)"
-					>{{ item.label }}</a
-				>
+					>{{ item.label }}</a>
 			</div>
 		</div>
 	</div>
