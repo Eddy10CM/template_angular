@@ -20,12 +20,14 @@ export class CardGraphNumberComponent implements OnChanges {
 	public lineChart2Colours: Array<any> [];
 
 	public lineChart2Legend = false
-	public lineChart2Type = 'line'
+	public lineChart2Type = 'bar'
 
-	constructor() {}
+	constructor() {
+	}
 
 	ngOnChanges() {
-		const chart: MoreGraph = new MoreGraph('line');
+		console.log(this.chartData);
+		const chart: MoreGraph = new MoreGraph('bar');
 		this.lineChart2Options = chart.getChartOptions();
 		this.lineChart2Colours = chart.generateGraph();
 		this.lineChart2Options.plugins.datalabels.display = false;

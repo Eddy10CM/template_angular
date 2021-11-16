@@ -19,9 +19,10 @@ export class HomeComponent implements OnInit {
 	rowsInfo2: IRows[] = []
 
 	rows = [{ nombre: 'Eddy' }, { nombre: 'Eddy' }]
+	
 
 	lineChart2Data: ChartSimple[] = [];
-	lineChart1Labels: string[] = ['Enero', 'Febrero'];
+	lineChart1Labels: string[] = [];
 
 	constructor(private userAuth: AuthService) {}
 
@@ -41,10 +42,20 @@ export class HomeComponent implements OnInit {
 		})
 
 		const data: ChartSimple = new ChartSimple({
-			data: [10, 25],
-			label: 'Serie A'
+			data: [1, 18, 9, 17, 34, 22, 11],
+			label: 'Series A',
 		});
 		this.lineChart2Data.push(data);
+		this.lineChart1Labels = [
+			'January',
+			'February',
+			'March',
+			'April',
+			'May',
+			'June',
+			'July',
+		];
+		
 	}
 
 	eventoRow(row: any[]) {
