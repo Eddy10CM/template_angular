@@ -1,7 +1,23 @@
-<div class="animated fadeIn" style="height: auto;">
-    <div class="row mb-5">
-        <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
-            <app-card-grap-chart-js></app-card-grap-chart-js>
-        </div>
-    </div>
+<div class="animated fadeIn container-daimler" >
+	<div class="row">
+		<div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
+			<app-card-grap-chart-js></app-card-grap-chart-js>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-6 col-lg-3">
+			<app-card-graph-number
+				[chartData]="lineChart2Data"
+				[chartLabel]="lineChart1Labels"
+				[total]="9.823"
+				[title]="'Members online'"
+			></app-card-graph-number>
+		</div>
+
+		<div class="col-sm-6 col-lg-9">
+			<app-card-grap-footer></app-card-grap-footer>
+		</div>
+	</div>
 </div>
+

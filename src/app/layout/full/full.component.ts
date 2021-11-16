@@ -12,11 +12,9 @@ export class FullComponent {
 	public sidebarMinimized = false
 	public navItems: INavData[] = []
 
-	public themes: string[] = ['light', 'dark', 'cosmic']
-	public currentTheme: string = 'dark'
-
 	constructor(public auth: AuthService, private menu: TypeMenuService) {
-		document.body.classList.add(this.currentTheme)
+		const theme = Theme.DARK
+		document.body.classList.add(theme)
 		this.navItems = menu.getMenu()
 	}
 
@@ -24,12 +22,14 @@ export class FullComponent {
 		this.sidebarMinimized = e
 	}
 
-	changeTheme(theme: string): void {
-		this.currentTheme = theme
-		for (let index = 0; index < this.themes.length; index++) {
-			const element = this.themes[index]
-			document.body.classList.remove(element)
-		}
+	changeTheme(): void {
+		console.log('test')
+		const theme = Theme.LIGHT
 		document.body.classList.add(theme)
 	}
+}
+
+enum Theme {
+	LIGHT = 'light',
+	DARK = 'dark',
 }

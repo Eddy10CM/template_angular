@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CardNumberComponent } from './card-number.component';
+import { CardGrapFooterComponent } from './card-grap-footer.component';
 
-describe('CardNumberComponent', () => {
-  let component: CardNumberComponent;
-  let fixture: ComponentFixture<CardNumberComponent>;
+describe('CardGrapFooterComponent', () => {
+  let component: CardGrapFooterComponent;
+  let fixture: ComponentFixture<CardGrapFooterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CardNumberComponent ]
+      declarations: [ CardGrapFooterComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CardNumberComponent);
+    fixture = TestBed.createComponent(CardGrapFooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

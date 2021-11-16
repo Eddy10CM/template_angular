@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips'
-import { ChartSimple } from 'src/app/shared/models/chart-simple'
-import { Kpi } from 'src/app/shared/models/kpi'
+import { ChartSimple } from 'src/app/shared/models/class/chart-simple'
 
 @Component({
 	selector: 'app-dashboard',
@@ -10,14 +9,6 @@ import { Kpi } from 'src/app/shared/models/kpi'
 	styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-	kpi1 = new Kpi('kpi1', '1er Kpi', '10', '%')
-	kpi2 = new Kpi('kpi2', '2do Kpi', '20', '°')
-	kpi3 = new Kpi('kpi3', '3er Kpi', '30', 'unidades')
-	kpi4 = new Kpi('kpi4', '4o Kpi', '40', 'dias')
-	kpi5 = new Kpi('kpi5', '5o Kpi', '50', 'horas')
-
-	kpilist: Kpi[] = [this.kpi1, this.kpi2, this.kpi3]
-
 	radioModel = 'Month'
 
 	// lineChart1
@@ -89,6 +80,7 @@ export class DashboardComponent implements OnInit {
 	]
 	public lineChart1Legend = false
 	public lineChart1Type = 'line'
+
 
 	// lineChart2
 	public lineChart2Data: Array<any> = [
@@ -493,12 +485,13 @@ export class DashboardComponent implements OnInit {
 		return Math.floor(Math.random() * (max - min + 1) + min)
 	}
 
-	ngOnInit(): void {
-		// generate random values for mainChart
-		for (let i = 0; i <= this.mainChartElements; i++) {
-			this.mainChartData1.push(this.random(50, 200))
-			this.mainChartData2.push(this.random(80, 100))
-			this.mainChartData3.push(65)
-		}
-	}
+  ngOnInit(): void {
+    // generate random values for mainChart
+    for (let i = 0; i <= this.mainChartElements; i++) {
+      this.mainChartData1.push(this.random(50, 200));
+      this.mainChartData2.push(this.random(80, 100));
+      this.mainChartData3.push(65);
+    }
+  }
+
 }

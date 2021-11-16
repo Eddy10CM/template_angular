@@ -1,21 +1,20 @@
 <div class="card layout text line">
-    <div class="card-header layout text line-bottom">
-        Traffic &amp; Sales
-    </div>
-    <div class="card-body">
-        <div class="row">
-            <div class="chart">
-                <canvas baseChart
-                  [data]="pieChartData"
-                  [labels]="pieChartLabels"
-                  [chartType]="pieChartType"
-                  [options]="pieChartOptions"
-                  [plugins]="pieChartPlugins"
-                  [colors]="pieChartColors"
-                  [legend]="pieChartLegend">
-                </canvas>
-              </div>
-        </div>
-    </div>
-
+	<div class="card-header layout text line-bottom">Traffic &amp; Sales</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="chart">
+				<canvas
+					baseChart
+					[data]="pieChartData"
+					[labels]="pieChartLabels"
+					[chartType]="pieChartType"
+					[options]="pieChartOptions"
+					[plugins]="pieChartPlugins"
+					[colors]="pieChartColors"
+					[legend]="pieChartLegend"
+				>
+				</canvas>
+			</div>
+		</div>
+	</div>
 </div>
