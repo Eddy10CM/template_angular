@@ -1,4 +1,4 @@
-import { CardNumber } from './components/card-number/card-number.component';
+import { CardNumber } from './components/card-number/card-number.component'
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { TableComponent } from './components/table/table.component'
@@ -12,8 +12,9 @@ import { FlipModule } from 'ngx-flip'
 import { TabsModule } from 'ngx-bootstrap/tabs'
 import { CardGrapGaugeComponent } from './components/card-grap-gauge/card-grap-gauge.component'
 import { DraggerComponent } from './components/card-grap-gauge/dragger/dragger.component'
-import { CardGrapChartJsComponent } from './components/card-grap-chart-js/card-grap-chart-js.component';
+import { CardGrapChartJsComponent } from './components/card-grap-chart-js/card-grap-chart-js.component'
 import { CardGrapFooterComponent } from './components/card-grap-footer/card-grap-footer.component'
+import { CardTableComponent } from './components/card-table/card-table.component'
 
 @NgModule({
 	declarations: [
@@ -23,7 +24,8 @@ import { CardGrapFooterComponent } from './components/card-grap-footer/card-grap
 		DraggerComponent,
 		CardGrapChartJsComponent,
 		CardGrapFooterComponent,
-    CardNumber,
+		CardNumber,
+		CardTableComponent,
 	],
 	imports: [
 		CommonModule,
@@ -43,7 +45,8 @@ import { CardGrapFooterComponent } from './components/card-grap-footer/card-grap
 		CardGrapGaugeComponent,
 		CardGrapChartJsComponent,
 		CardGrapFooterComponent,
-    CardNumber,
+		CardNumber,
+		CardTableComponent,
 	],
 })
 export class SharedModule {}

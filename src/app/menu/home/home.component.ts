@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 	columnsInfo: IColumns[] = []
 	rowsInfo2: IRows[] = []
 
-	rows = [{ nombre: 'Eddy' }, { nombre: 'Eddy' }]
+	rows = [{ nombre: 'Eddy', apellido:'Moreno' }, { nombre: 'Gabriel',apellido:'Arroyo' }]
 
 	lineChart2Data: ChartSimple[] = [];
 	lineChart1Labels: string[] = ['Enero', 'Febrero'];
@@ -29,6 +29,10 @@ export class HomeComponent implements OnInit {
 		this.columnsHome.push({
 			columnDef: 'Name',
 			header: 'Nombre',
+		})
+    this.columnsHome.push({
+			columnDef: 'LastName',
+			header: 'Apellido',
 		})
 
 		let row: IRows

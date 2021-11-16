@@ -7,9 +7,7 @@ import { Component, Input, OnInit } from '@angular/core'
 	styleUrls: ['../card-number/card-number.component.scss'],
 })
 export class CardNumber implements OnInit {
-	name = 'Title'
-	value = '0'
-	units = ''
+
 	kpi: Kpi = new Kpi({})
 	kpi1: Kpi = new Kpi({ label: 'Kpi2', data: '20', units: '' })
 	kpi2: Kpi = new Kpi({ label: 'Kpi3', data: '30', units: '' })
