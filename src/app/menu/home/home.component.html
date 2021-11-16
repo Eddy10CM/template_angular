@@ -1,15 +1,12 @@
 <div class="animated fadeIn">
-<div class="animated fadeIn container-daimler" >
 	<div class="row">
 		<div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
 			<app-card-grap-chart-js></app-card-grap-chart-js>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-sm-6 col-lg-3" *ngIf="lineChart2Data.length > 0" >
 
 	<div class="row">
-		<div class="col-sm-6 col-lg-3">
+		<div class="col-sm-6 col-lg-3" *ngIf="lineChart2Data.length > 0">
 			<app-card-graph-number
 				[chartData]="lineChart2Data"
 				[chartLabel]="lineChart1Labels"
@@ -18,9 +15,62 @@
 			></app-card-graph-number>
 		</div>
 
-		<div class="col-sm-6 col-lg-9">
-			<!--app-card-grap-footer></app-card-grap-footer-->
+		<!--div class="col-sm-6 col-lg-9">
+			<app-card-grap-footer></app-card-grap-footer>
+		</div-->
+
+		<div class="col-sm-6 col-lg-3" *ngIf="lineChart2Data.length > 0">
+			<app-card-graph-number
+				[chartData]="lineChart2Data"
+				[chartLabel]="lineChart1Labels"
+				[total]="9.823"
+				[title]="'Members online'"
+			></app-card-graph-number>
 		</div>
+
+		<div class="col-sm-6 col-lg-3">
+			<div class="card">
+				<div class="card-header bg-primary">
+					<div class="font-weight-bold">
+						<span>SALE</span>
+						<span class="float-right">$1.890,65</span>
+					</div>
+					<div>
+						<span>
+							<small>Today 6:43 AM</small>
+						</span>
+						<span class="float-right">
+							<small>+432,50 (15,78%)</small>
+						</span>
+					</div>
+					<div class="chart-wrapper" style="height: 38px">
+						<canvas
+							baseChart
+							class="chart"
+							[datasets]="lineChart4Data"
+							[labels]="lineChart4Labels"
+							[options]="lineChart4Options"
+							[colors]="lineChart4Colours"
+							[legend]="lineChart4Legend"
+							[chartType]="lineChart4Type"
+						></canvas>
+					</div>
+					<div class="chart-wrapper" style="height: 38px">
+						<canvas
+							baseChart
+							class="chart"
+							[datasets]="barChart2Data"
+							[labels]="barChart2Labels"
+							[options]="barChart2Options"
+							[colors]="barChart2Colours"
+							[legend]="barChart2Legend"
+							[chartType]="barChart2Type"
+						></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row"></div>
 	</div>
 </div>
-

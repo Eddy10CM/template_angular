@@ -20,14 +20,94 @@ export class HomeComponent implements OnInit {
 
 	rows = [{ nombre: 'Eddy' }, { nombre: 'Eddy' }]
 
-	
+	// lineChart4
+	public lineChart4Data: Array<any> = [
+		{
+			data: [4, 18, 9, 17, 34, 22, 11, 3, 15, 12, 18, 9],
+			label: 'Series A'
+		}
+	];
+	public lineChart4Labels: Array<any> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	public lineChart4Options: any = {
+		tooltips: {
+			enabled: true,
+			//custom: CustomTooltips
+		},
+		maintainAspectRatio: false,
+		scales: {
+			xAxes: [{
+				display: false,
+				points: false,
+			}],
+			yAxes: [{
+				display: false,
+			}]
+		},
+		elements: { point: { radius: 0 } },
+		legend: {
+			display: false
+		}
+	};
+	public lineChart4Colours: Array<any> = [
+		{
+			backgroundColor: 'transparent',
+			borderColor: 'rgba(255,255,255,.55)',
+			borderWidth: 2
+		}
+	];
+	public lineChart4Legend = false;
+	public lineChart4Type = 'line';
 
+	// barChart2
+	public barChart2Data: Array<any> = [
+		{
+			data: [4, 18, 9, 17, 34, 22, 11, 3, 15, 12, 18, 9],
+			label: 'Series A',
+			barPercentage: 0.6
+		}
+	];
+	public barChart2Labels: Array<any> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	public barChart2Options: any = {
+		tooltips: {
+			enabled: true,
+			//custom: CustomTooltips
+		},
+		maintainAspectRatio: false,
+		scales: {
+			xAxes: [{
+				display: false,
+			}],
+			yAxes: [{
+				display: false,
+				ticks: {
+					beginAtZero: true,
+				}
+			}]
+		},
+		legend: {
+			display: false
+		}
+	};
+	public barChart2Colours: Array<any> = [
+		{
+			backgroundColor: 'rgba(0,0,0,.2)',
+			borderWidth: 0
+		}
+	];
+	public barChart2Legend = false;
+	public barChart2Type = 'bar';
+
+
+
+	//----
 	lineChart2Data: ChartSimple[] = [];
 	lineChart1Labels: string[] = [];
-	constructor(private userAuth: AuthService) {}
+	data: ChartSimple;
+	constructor(private userAuth: AuthService) { }
+
 
 	ngOnInit(): void {
-		this.columnsHome.push({
+		/*this.columnsHome.push({
 			columnDef: 'Name',
 			header: 'Nombre',
 		})
@@ -39,13 +119,14 @@ export class HomeComponent implements OnInit {
 				row[key] = rowTest[key]
 			}
 			this.rowsHome.push(row)
-		})
+		})*/
 
-		const data: ChartSimple = new ChartSimple({
-			data: [1, 18, 9, 17, 34, 22, 11],
+		this.data = new ChartSimple({
+			data: [5, 18, 9, 17, 50, 22, 11],
 			label: 'Series A',
+			barPercentage: 0.5
 		});
-		this.lineChart2Data.push(data);
+		this.lineChart2Data.push(this.data);
 		this.lineChart1Labels = [
 			'January',
 			'February',

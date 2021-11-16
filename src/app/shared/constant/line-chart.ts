@@ -26,8 +26,7 @@ export const LINE_CHART_OPTIONS: ChartOptions = {
                 display: false,
                 ticks: {
                     display: false,
-                    min: 1 - 5,
-                    max: 34 + 5,
+                    
                 },
             },
         ],

@@ -13,7 +13,7 @@ export abstract class TypeChart {
      * 
      */
     abstract generateGraph(): Array<any>;
-
+ 
     getChartOptions(): ChartOptions {
         let optionsChart: ChartOptions = {};
         switch(this.typeChart) {

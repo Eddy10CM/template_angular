@@ -21,7 +21,7 @@ export class MoreGraph extends TypeChart {
                 colors = [
                     {
                         backgroundColor: 'rgba(255,255,255,.3)',
-                        borderWidth: 0,
+                        borderWidth: 0
                     },
                 ]
                 break;
