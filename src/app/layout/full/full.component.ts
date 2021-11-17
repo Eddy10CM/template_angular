@@ -16,6 +16,7 @@ export class FullComponent {
 
 	constructor(public auth: AuthService, private menu: TypeMenuService) {
 		const theme = this.themeList[0]
+
 		document.body.classList.add(theme)
 		this.navItems = menu.getMenu()
 	}

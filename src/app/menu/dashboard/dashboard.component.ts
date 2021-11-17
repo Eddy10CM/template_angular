@@ -11,12 +11,11 @@ import { IRows } from 'src/app/shared/models/i-rows'
 	styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
+	radioModel = 'Month'
 
   columnsHome: IColumns[] = []
 	rowsHome: IRows[] = []
   rows = [{ nombre: 'Eddy', apellido:'Moreno' }, { nombre: 'Gabriel',apellido:'Arroyo' }, { nombre: 'Edwin',apellido:'Blanco' }, { nombre: 'Gabriel',apellido:'Arroyo' }]
-
-  radioModel = 'Month'
 
 	// lineChart1
 	public lineChart1Data: Array<ChartSimple> = [
@@ -88,6 +87,7 @@ export class DashboardComponent implements OnInit {
 	public lineChart1Legend = false
 	public lineChart1Type = 'line'
 
+
 	// lineChart2
 	public lineChart2Data: Array<any> = [
 		{
@@ -104,6 +104,7 @@ export class DashboardComponent implements OnInit {
 		'June',
 		'July',
 	]
+
 	public lineChart2Options: any = {
 		tooltips: {
 			enabled: false,
@@ -175,6 +176,7 @@ export class DashboardComponent implements OnInit {
 		'June',
 		'July',
 	]
+
 	public lineChart3Options: any = {
 		tooltips: {
 			enabled: false,
@@ -259,10 +261,21 @@ export class DashboardComponent implements OnInit {
 				},
 			],
 		},
+		elements: {
+			line: {
+				borderWidth: 2,
+			},
+			point: {
+				radius: 0,
+				hitRadius: 10,
+				hoverRadius: 4,
+			},
+		},
 		legend: {
 			display: false,
 		},
 	}
+
 	public barChart1Colours: Array<any> = [
 		{
 			backgroundColor: 'rgba(255,255,255,.3)',
@@ -517,4 +530,5 @@ export class DashboardComponent implements OnInit {
 			this.rowsHome.push(row)
 		})
 	}
+
 }

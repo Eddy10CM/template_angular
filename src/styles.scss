@@ -25,6 +25,7 @@ html {
 	text-transform: uppercase;
 }
 
+
 @mixin set-theme($map) {
 	body {
 		background-color: map-get-value($map, background-color);

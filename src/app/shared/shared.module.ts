@@ -16,6 +16,7 @@ import { CardGrapChartJsComponent } from './components/card-grap-chart-js/card-g
 import { CardGrapFooterComponent } from './components/card-grap-footer/card-grap-footer.component'
 import { CardTableComponent } from './components/card-table/card-table.component'
 
+
 @NgModule({
 	declarations: [
 		TableComponent,
