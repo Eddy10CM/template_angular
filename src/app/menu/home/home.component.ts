@@ -3,6 +3,7 @@ import { IColumns } from 'src/app/shared/models/i-columns'
 import { IRows } from 'src/app/shared/models/i-rows'
 import { AuthService } from '../../shared/services/auth.service'
 import { TableComponent } from '../../shared/components/table/table.component'
+import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips'
 import { ChartSimple } from 'src/app/shared/models/class/chart-simple'
 
 @Component({
@@ -33,8 +34,8 @@ export class HomeComponent implements OnInit {
 	public lineChart4Labels: Array<any> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 	public lineChart4Options: any = {
 		tooltips: {
-			enabled: true,
-			//custom: CustomTooltips
+			enabled: false,
+			custom: CustomTooltips
 		},
 		maintainAspectRatio: false,
 		scales: {
@@ -49,6 +50,11 @@ export class HomeComponent implements OnInit {
 		elements: { point: { radius: 0 } },
 		legend: {
 			display: false
+		},
+		plugins: {
+			datalabels: {
+				display: false,
+			},
 		}
 	};
 	public lineChart4Colours: Array<any> = [
@@ -72,8 +78,8 @@ export class HomeComponent implements OnInit {
 	public barChart2Labels: Array<any> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 	public barChart2Options: any = {
 		tooltips: {
-			enabled: true,
-			//custom: CustomTooltips
+			enabled: false,
+			custom: CustomTooltips
 		},
 		maintainAspectRatio: false,
 		scales: {
@@ -89,6 +95,11 @@ export class HomeComponent implements OnInit {
 		},
 		legend: {
 			display: false
+		},
+		plugins: {
+			datalabels: {
+				display: false,
+			},
 		}
 	};
 	public barChart2Colours: Array<any> = [

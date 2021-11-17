@@ -1,4 +1,4 @@
-<ngx-flip [flip]="flipped" *ngIf="chartData.length > 0; else loading">
+<ngx-flip [flip]="flipped" *ngIf="loading; else loadingDiv">
 	<div class="card text-white bg-info" front>
 		<div class="card-body pb-0">
 			<button
@@ -47,8 +47,6 @@
 		</div>
 	</div>
 </ngx-flip>
-<ng-template #loading >
-	<p class="text">
-		Cargando...
-	</p>
+<ng-template #loadingDiv>
+	<app-loading></app-loading>
 </ng-template>

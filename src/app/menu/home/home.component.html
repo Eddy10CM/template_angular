@@ -1,8 +1,7 @@
-<!--div class="animated fadeIn">
+<div class="animated fadeIn">
 	<div class="row">
 		<div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
 			<app-card-grap-chart-js></app-card-grap-chart-js>
-			
 		</div>
 	</div>
 
@@ -20,17 +19,16 @@
 			<app-card-grap-footer></app-card-grap-footer>
 		</div>
 
-		<div class="col-sm-6 col-lg-9">
+		<!--div class="col-sm-6 col-lg-9">
 			<app-table
 				[title]="'my table'"
 				[columns]="columnsHome"
 				[rows]="rowsHome"
 			></app-table>
-		</div>
+		</div-->
 	</div>
-</div>
 
-
+	<div class="row">
 		<div class="col-sm-6 col-lg-3" *ngIf="lineChart2Data.length > 0">
 			<app-card-graph-number
 				[chartData]="lineChart2Data"
@@ -55,35 +53,41 @@
 							<small>+432,50 (15,78%)</small>
 						</span>
 					</div>
-					<div class="chart-wrapper" style="height: 38px">
-						<canvas
-							baseChart
-							class="chart"
-							[datasets]="lineChart4Data"
-							[labels]="lineChart4Labels"
-							[options]="lineChart4Options"
-							[colors]="lineChart4Colours"
-							[legend]="lineChart4Legend"
-							[chartType]="lineChart4Type"
-						></canvas>
-					</div>
-					<div class="chart-wrapper" style="height: 38px">
-						<canvas
-							baseChart
-							class="chart"
-							[datasets]="barChart2Data"
-							[labels]="barChart2Labels"
-							[options]="barChart2Options"
-							[colors]="barChart2Colours"
-							[legend]="barChart2Legend"
-							[chartType]="barChart2Type"
-						></canvas>
+					
+					<div class="card-body">
+						<div class="chart-wrapper" style="height: 38px">
+							<canvas
+								baseChart
+								class="chart"
+								[datasets]="lineChart4Data"
+								[labels]="lineChart4Labels"
+								[options]="lineChart4Options"
+								[colors]="lineChart4Colours"
+								[legend]="lineChart4Legend"
+								[chartType]="lineChart4Type"
+							></canvas>
+						</div>
+						<div class="chart-wrapper" style="height: 38px">
+							<canvas
+								baseChart
+								class="chart"
+								[datasets]="barChart2Data"
+								[labels]="barChart2Labels"
+								[options]="barChart2Options"
+								[colors]="barChart2Colours"
+								[legend]="barChart2Legend"
+								[chartType]="barChart2Type"
+							></canvas>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="row"></div>
 	</div>
-</div-->
-<app-carousels></app-carousels>
+
+	<div class="row">
+		<app-carousels></app-carousels>
+	</div>
+</div>
+
+

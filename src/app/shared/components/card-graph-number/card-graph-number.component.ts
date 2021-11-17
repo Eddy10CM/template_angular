@@ -13,6 +13,7 @@ export class CardGraphNumberComponent implements OnChanges {
 	@Input() total: number | string
 	@Input() title: string
 	flipped = false
+	loading = false;
 
 	public lineChart2Options: ChartOptions;
 
@@ -25,6 +26,9 @@ export class CardGraphNumberComponent implements OnChanges {
 	}
 
 	ngOnChanges(): void {
+		setTimeout(() => {
+			this.loading = true;
+		}, 5000);
 		const chart: MoreGraph = new MoreGraph('bar');
 		this.lineChart2Options = chart.getChartOptions();
 		this.lineChart2Colours = chart.generateGraph();

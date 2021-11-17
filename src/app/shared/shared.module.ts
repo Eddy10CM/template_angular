@@ -17,7 +17,8 @@ import { CardGrapChartJsComponent } from './components/card-grap-chart-js/card-g
 import { CardGrapFooterComponent } from './components/card-grap-footer/card-grap-footer.component';
 import { CarouselsComponent } from './components/carousels/carousels.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { CardTableComponent } from './components/card-table/card-table.component'
+import { CardTableComponent } from './components/card-table/card-table.component';
+import { LoadingComponent } from './components/loading/loading.component'
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { CardTableComponent } from './components/card-table/card-table.component
 	    CarouselsComponent,
 		CardNumber,
 		CardTableComponent,
+		LoadingComponent,
 	],
 	imports: [
 		CommonModule,
@@ -55,6 +57,7 @@ import { CardTableComponent } from './components/card-table/card-table.component
 		CarouselsComponent,
 		CardNumber,
 		CardTableComponent,
+		LoadingComponent
 	],
 })
 export class SharedModule {}
