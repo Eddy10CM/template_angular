@@ -13,7 +13,9 @@ import { TabsModule } from 'ngx-bootstrap/tabs'
 import { CardGrapGaugeComponent } from './components/card-grap-gauge/card-grap-gauge.component'
 import { DraggerComponent } from './components/card-grap-gauge/dragger/dragger.component'
 import { CardGrapChartJsComponent } from './components/card-grap-chart-js/card-grap-chart-js.component';
-import { CardGrapFooterComponent } from './components/card-grap-footer/card-grap-footer.component'
+import { CardGrapFooterComponent } from './components/card-grap-footer/card-grap-footer.component';
+import { CarouselsComponent } from './components/carousels/carousels.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
 	declarations: [
@@ -24,6 +26,7 @@ import { CardGrapFooterComponent } from './components/card-grap-footer/card-grap
 		CardGrapChartJsComponent,
 		CardGrapFooterComponent,
 	    CardNumber,
+	    CarouselsComponent,
 	],
 	imports: [
 		CommonModule,
@@ -36,6 +39,7 @@ import { CardGrapFooterComponent } from './components/card-grap-footer/card-grap
 		FlipModule,
 		ButtonsModule.forRoot(),
 		TabsModule.forRoot(),
+		CarouselModule.forRoot()
 	],
 	exports: [
 		TableComponent,
@@ -43,7 +47,8 @@ import { CardGrapFooterComponent } from './components/card-grap-footer/card-grap
 		CardGrapGaugeComponent,
 		CardGrapChartJsComponent,
 		CardGrapFooterComponent,
-	    CardNumber
+	    CardNumber,
+		CarouselsComponent
 	],
 })
 export class SharedModule {}
