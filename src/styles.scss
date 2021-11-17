@@ -1,20 +1,14 @@
-@import '~bootstrap-icons/font/bootstrap-icons.css';
-@import '~@coreui/coreui/scss/coreui';
-
+@import '/src/functions';
+@import '/src/mixins';
 @import '/src/app/themes/dark.scss';
 @import '/src/app/themes/light.scss';
+@import '/src/variables';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+@import '~@coreui/coreui/scss/coreui';
 
 body,
 html {
 	height: 100%;
-}
-
-@function map-get-value($map, $key) {
-	@if map-has-key($map, $key) {
-		@return map-get($map, $key);
-	} @else {
-		@error "ERROR: Specified key #{$key} does not exist in the mapping #{map-get($map, name)}";
-	}
 }
 
 .capitalize-first {
@@ -23,104 +17,6 @@ html {
 
 .capitalize-first::first-letter {
 	text-transform: uppercase;
-}
-
-
-@mixin set-theme($map) {
-	body {
-		background-color: map-get-value($map, background-color);
-	}
-	.layout {
-		background-color: map-get-value($map, background-color);
-	}
-	.text {
-		color: map-get-value($map, text-color);
-	}
-	.line {
-		border: map-get-value($map, border-line);
-	}
-	.line-right {
-		border-right: map-get-value($map, border-line);
-	}
-	.line-bottom {
-		border-bottom: map-get-value($map, border-line);
-	}
-	.breadcrumb {
-		background-color: map-get-value($map, background-color) !important;
-		border: map-get-value($map, border-line);
-		color: map-get-value($map, text-color);
-	}
-	.footer-card {
-		border-top: map-get-value($map, border-line);
-		background-color: map-get-value($map, background-footer);
-	}
-	.brand-card {
-		border: map-get-value($map, border-line);
-	}
-	.brand-card-body {
-		background-color: map-get-value($map, background-color);
-		color: map-get-value($map, text-color);
-
-		> *:not(:last-child) {
-			border-right: map-get-value($map, border-line);
-		}
-	}
-	.table {
-		border: map-get-value($map, border-line);
-		color: map-get-value($map, text-color);
-		background: map-get-value($map, background-color);
-	}
-	.table-outline {
-		border: map-get-value($map, border-line) !important;
-	}
-	.table .thead-light th {
-		color: map-get-value($map, text-color);
-		background-color: map-get-value($map, background-footer);
-		border-color: map-get-value($map, background-color);
-	}
-	.table thead th {
-		vertical-align: bottom;
-		border-bottom: map-get-value($map, border-table);
-	}
-	.table th {
-		border-top: map-get-value($map, border-line);
-	}
-	.aside-menu {
-		background: map-get-value($map, background-color);
-		border-left: map-get-value($map, border-line);
-	}
-	.aside-menu .tab-content {
-		border-top: map-get-value($map, border-line);
-	}
-	.nav-tabs {
-		border-bottom: map-get-value($map, border-line);
-	}
-
-	.nav-tabs .nav-link {
-		color: map-get-value($map, text-color);
-	}
-	.nav-tabs .nav-link.active {
-		background: map-get-value($map, background-footer);
-		border-right-color: map-get-value($map, background-color);
-		border-right: map-get-value($map, border-line);
-	}
-	.aside-menu .nav-tabs .nav-link.active {
-		color: #20a8d8;
-		border-right-color: map-get-value($map, border-color);
-		border-left-color: map-get-value($map, border-color);
-	}
-	.aside-menu .nav-tabs .nav-link:hover {
-		border-right-color: map-get-value($map, border-color);
-		border-left-color: map-get-value($map, border-color);
-	}
-	.tab-content {
-		background: map-get-value($map, background-color);
-		color: map-get-value($map, text-color);
-	}
-	.list-group-item {
-		background-color: map-get-value($map, background-color);
-		color: map-get-value($map, text-color);
-	}
 }
 
 .dark {

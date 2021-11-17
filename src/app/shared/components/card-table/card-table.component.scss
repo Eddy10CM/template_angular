@@ -1,13 +1,4 @@
-@import '~bootstrap-icons/font/bootstrap-icons.css';
-@import '~@coreui/coreui/scss/coreui';
-
-@import '/src/app/themes/dark.scss';
-@import '/src/app/themes/light.scss';
-
-body,
-html {
-	height: 100%;
-}
+@import '/src/styles.scss';
 
 .value-body {
 	text-align: center;

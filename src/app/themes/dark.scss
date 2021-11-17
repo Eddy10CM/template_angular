@@ -1,9 +1,13 @@
 $dark-value-map: (
 	name: 'dark',
 	text-color: #f3f4f5,
-	background-color: #3a4149,
-	background-footer: #343b41,
-	border-line: 1px solid #23282c,
-	border-table: 2px solid #23282c,
+	background-color: #222b45,
+	background-footer: #15192e,
+	border-line: 1px solid #151a30,
+	border-table: 2px solid #151a30,
 	border-color: #23282c,
+	background-dark: #151a30,
+  active-menu: #3366ff,
+  inactive-icon: #8f9bb3,
 );
+$theme-primary:#222b45,
