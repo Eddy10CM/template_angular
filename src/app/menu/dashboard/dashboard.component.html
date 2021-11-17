@@ -1,5 +1,19 @@
 <div class="animated fadeIn">
 	<div class="row">
+		<!-- number -->
+		<div class="col-sm-6 col-lg-3">
+			<app-card-number></app-card-number>
+		</div>
+		<!-- table -->
+		<div class="col-sm-6 col-lg-3">
+			<app-card-table
+				[title]="'my title'"
+				[columns]="columnsHome"
+				[rows]="rowsHome"
+			></app-card-table>
+		</div>
+
+		<!-- row -->
 		<div class="col-sm-6 col-lg-3">
 			<app-card-graph-number
 				[chartData]="lineChart2Data"

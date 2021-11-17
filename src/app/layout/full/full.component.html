@@ -1,24 +1,23 @@
 <app-header
-	class="layout text line"
+	class="layout text line shadow"
 	[navbarBrandRouterLink]="['/menu/dashboard']"
 	[fixed]="true"
 	[navbarBrandFull]="{
-		src: 'assets/img/brand/logo.svg',
+		src: 'assets/img/brand/DaimlerLogo.svg',
 		width: 89,
 		height: 25,
-		alt: 'CoreUI Logo'
+		alt: 'Daimler Logo'
 	}"
 	[navbarBrandMinimized]="{
 		src: 'assets/img/brand/sygnet.svg',
 		width: 30,
 		height: 30,
-		alt: 'CoreUI Logo'
+		alt: 'Daimler Logo'
 	}"
 	[sidebarToggler]="'lg'"
 	[asideMenuToggler]="'lg'"
 >
 	<ul class="nav navbar-nav d-md-down-none">
-		<li class="nav-item px-3">
 		<li class="nav-item px-3">
 			<a class="nav-link">Dashboard</a>
 		</li>
@@ -45,7 +44,6 @@
         >{{ item }}</a>
     </div>
   </div>
-
 	<ul class="nav navbar-nav ml-auto">
 		<li class="nav-item d-md-down-none">
 			<a class="nav-link"
@@ -140,7 +138,7 @@
 		<app-sidebar-minimizer></app-sidebar-minimizer>
 	</app-sidebar>
 	<!-- Main content -->
-	<main class="main layout">
+	<main class="main layout-back">
 		<!-- Breadcrumb -->
 		<!-- breaking change 'cui-breadcrumb' -->
 		<cui-breadcrumb>

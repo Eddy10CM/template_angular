@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core'
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips'
 import { ChartSimple } from 'src/app/shared/models/class/chart-simple'
+import { IColumns } from 'src/app/shared/models/i-columns'
+import { IRows } from 'src/app/shared/models/i-rows'
 
 @Component({
 	selector: 'app-dashboard',
@@ -10,6 +12,10 @@ import { ChartSimple } from 'src/app/shared/models/class/chart-simple'
 })
 export class DashboardComponent implements OnInit {
 	radioModel = 'Month'
+
+  columnsHome: IColumns[] = []
+	rowsHome: IRows[] = []
+  rows = [{ nombre: 'Eddy', apellido:'Moreno' }, { nombre: 'Gabriel',apellido:'Arroyo' }, { nombre: 'Edwin',apellido:'Blanco' }, { nombre: 'Gabriel',apellido:'Arroyo' }]
 
 	// lineChart1
 	public lineChart1Data: Array<ChartSimple> = [
@@ -98,6 +104,7 @@ export class DashboardComponent implements OnInit {
 		'June',
 		'July',
 	]
+
 	public lineChart2Options: any = {
 		tooltips: {
 			enabled: false,
@@ -169,6 +176,7 @@ export class DashboardComponent implements OnInit {
 		'June',
 		'July',
 	]
+
 	public lineChart3Options: any = {
 		tooltips: {
 			enabled: false,
@@ -253,10 +261,21 @@ export class DashboardComponent implements OnInit {
 				},
 			],
 		},
+		elements: {
+			line: {
+				borderWidth: 2,
+			},
+			point: {
+				radius: 0,
+				hitRadius: 10,
+				hoverRadius: 4,
+			},
+		},
 		legend: {
 			display: false,
 		},
 	}
+
 	public barChart1Colours: Array<any> = [
 		{
 			backgroundColor: 'rgba(255,255,255,.3)',
@@ -485,13 +504,31 @@ export class DashboardComponent implements OnInit {
 		return Math.floor(Math.random() * (max - min + 1) + min)
 	}
 
-  ngOnInit(): void {
-    // generate random values for mainChart
-    for (let i = 0; i <= this.mainChartElements; i++) {
-      this.mainChartData1.push(this.random(50, 200));
-      this.mainChartData2.push(this.random(80, 100));
-      this.mainChartData3.push(65);
-    }
-  }
+	ngOnInit(): void {
+		// generate random values for mainChart
+		for (let i = 0; i <= this.mainChartElements; i++) {
+			this.mainChartData1.push(this.random(50, 200))
+			this.mainChartData2.push(this.random(80, 100))
+			this.mainChartData3.push(65)
+		}
+
+    this.columnsHome.push({
+			columnDef: 'Name',
+			header: 'Nombre',
+		})
+    this.columnsHome.push({
+			columnDef: 'LastName',
+			header: 'Apellido',
+		})
+
+		let row: IRows
+		this.rows.forEach((rowTest: any) => {
+			row = {}
+			for (const key in rowTest) {
+				row[key] = rowTest[key]
+			}
+			this.rowsHome.push(row)
+		})
+	}
 
 }

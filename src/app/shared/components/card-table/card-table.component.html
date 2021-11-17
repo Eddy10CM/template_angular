@@ -37,8 +37,26 @@
 		</div>
 	</div>
 
-	<div class="card-body value-body">
+	<!-- <div class="card-body value-body">
 		<span class="card-title value">{{ kpi.data }}</span>
 		<span class="card-text units"> {{ kpi.units }}</span>
+	</div> -->
+	<div class="scroll">
+		<table class="table table-hover table-borderless bg-primary">
+			<thead class="thead-dark">
+				<tr >
+					<th  *ngFor="let column of columns">
+						{{ column.header }}
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let row of rowLocal">
+					<td *ngFor="let r of row">
+						{{ r.value }}
+					</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>

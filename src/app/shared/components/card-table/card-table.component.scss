@@ -1,0 +1,33 @@
+@import '/src/styles.scss';
+
+.value-body {
+	text-align: center;
+}
+
+.value {
+	font-size: 3rem;
+	vertical-align: middle;
+}
+
+.units {
+	font-size: 2rem;
+	vertical-align: middle;
+}
+
+.header {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	// background-color: red;
+}
+
+.header-button {
+	display: inline-block;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.scroll {
+	max-height: 200px;
+	overflow-y: auto;
+}

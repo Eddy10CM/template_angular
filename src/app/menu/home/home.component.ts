@@ -1,9 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { IColumns } from 'src/app/shared/models/i-columns';
-import { IRows } from 'src/app/shared/models/i-rows';
-import { AuthService } from '../../shared/services/auth.service';
-import { TableComponent } from '../../shared/components/table/table.component';
-import { ChartSimple } from 'src/app/shared/models/class/chart-simple';
+import { Component, OnInit, ViewChild } from '@angular/core'
+import { IColumns } from 'src/app/shared/models/i-columns'
+import { IRows } from 'src/app/shared/models/i-rows'
+import { AuthService } from '../../shared/services/auth.service'
+import { TableComponent } from '../../shared/components/table/table.component'
+import { ChartSimple } from 'src/app/shared/models/class/chart-simple'
 
 @Component({
 	selector: 'app-home',
@@ -18,7 +18,10 @@ export class HomeComponent implements OnInit {
 	columnsInfo: IColumns[] = []
 	rowsInfo2: IRows[] = []
 
-	rows = [{ nombre: 'Eddy' }, { nombre: 'Eddy' }]
+	rows = [
+		{ nombre: 'Eddy', apellido: 'Moreno' },
+		{ nombre: 'Gabriel', apellido: 'Arroyo' },
+	]
 
 	// lineChart4
 	public lineChart4Data: Array<any> = [
@@ -106,10 +109,16 @@ export class HomeComponent implements OnInit {
 	constructor(private userAuth: AuthService) { }
 
 
+
+
 	ngOnInit(): void {
 		/*this.columnsHome.push({
 			columnDef: 'Name',
 			header: 'Nombre',
+		})
+		this.columnsHome.push({
+			columnDef: 'LastName',
+			header: 'Apellido',
 		})
 
 		let row: IRows

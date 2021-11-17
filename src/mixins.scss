@@ -1,51 +1,20 @@
 @import '/src/functions';
-@import '/src/mixins';
-@import '/src/app/themes/dark.scss';
-@import '/src/app/themes/light.scss';
 @import '/src/variables';
-@import '~bootstrap-icons/font/bootstrap-icons.css';
-@import '~@coreui/coreui/scss/coreui';
-
-body,
-html {
-	height: 100%;
-}
-
-.app,
-app-dashboard,
-app-home,
-app-login,
-app-root {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-
-
-@function map-get-value($map, $key) {
-	@if map-has-key($map, $key) {
-		@return map-get($map, $key);
-	} @else {
-		@error "ERROR: Specified key #{$key} does not exist in the mapping #{map-get($map, name)}";
-	}
-}
-
-
-.capitalize-first {
-	text-transform: lowercase;
-}
-
-.capitalize-first::first-letter {
-	text-transform: uppercase;
-}
 
 @mixin set-theme($map) {
+	$primary: #121 !default;
 	body {
 		background-color: map-get-value($map, background-color);
 	}
+
+	.shadow {
+		box-shadow: 8px 20px rgb(0, 0, 0);
+	}
 	.layout {
 		background-color: map-get-value($map, background-color);
+	}
+	.layout-back {
+		background-color: map-get-value($map, background-dark);
 	}
 	.text {
 		color: map-get-value($map, text-color);
@@ -109,7 +78,6 @@ app-root {
 	.nav-tabs {
 		border-bottom: map-get-value($map, border-line);
 	}
-
 	.nav-tabs .nav-link {
 		color: map-get-value($map, text-color);
 	}
@@ -119,7 +87,7 @@ app-root {
 		border-right: map-get-value($map, border-line);
 	}
 	.aside-menu .nav-tabs .nav-link.active {
-		color: #20a8d8;
+		color: map-get-value($map, active-menu);
 		border-right-color: map-get-value($map, border-color);
 		border-left-color: map-get-value($map, border-color);
 	}
@@ -135,18 +103,22 @@ app-root {
 		background-color: map-get-value($map, background-color);
 		color: map-get-value($map, text-color);
 	}
-}
-
-.dark {
-	@include set-theme($dark-value-map);
-}
-
-.light {
-	@include set-theme($ligth-value-map);
-}
-
-.container-daimler {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh !important;
+	.sidebar {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		color: map-get-value($map, text-color);
+		background: map-get-value($map, background-color);
+	}
+	.sidebar .nav-link.active {
+		color: map-get-value($map, active-menu);
+		background: map-get-value($map, background-color);
+		font-weight: bold;
+	}
+	.sidebar .nav-link.active .nav-icon {
+		color: map-get-value($map, active-menu);
+	}
+	.sidebar .nav-link .nav-icon {
+		color: map-get-value($map, inactive-icon);
+	}
 }
