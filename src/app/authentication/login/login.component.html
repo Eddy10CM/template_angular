@@ -1,19 +1,55 @@
-<div class="container d-flex h-100">
-	<div class="row align-self-center w-100">
-		<div class="col-6 mx-auto">
-			<div class="jumbotron">
-				<h1 class="display-4 text-truncate">Jumbotron</h1>
-				<p class="lead">This is a simple hero unit.</p>
-				<p class="lead">
-					<button
-						class="btn btn-primary btn-lg"
-						type="button"
-						(click)="doLogin()"
-					>
-						Learn more
-					</button>
-				</p>
+<div class="app-body">
+	<main class="main d-flex align-items-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 mx-auto">
+					<div class="card-group">
+						<div class="card p-4">
+							<div class="card-body">
+								<form>
+									<h1>Login</h1>
+									<p class="text-muted">Inicia sesion en tu cuenta</p>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">
+												<i class="icon-user"></i>
+											</span>
+										</div>
+										<input
+											type="text"
+											class="form-control"
+											placeholder="WIW"
+											autocomplete="off"
+											required
+										/>
+									</div>
+									<div class="input-group mb-4">
+										<div class="input-group-prepend">
+											<span class="input-group-text">
+												<i class="icon-lock"></i>
+											</span>
+										</div>
+										<input
+											type="password"
+											class="form-control"
+											placeholder="Password"
+											required
+										/>
+									</div>
+									<div class="d-grid gap-2">
+										<button
+											class="btn btn-primary btn-lg px-4"
+											(click)="doLogin()"
+										>
+											Login
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</main>
 </div>

@@ -12,12 +12,14 @@ html {
 .app,
 app-dashboard,
 app-home,
+app-login,
 app-root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
+
+
 
 @function map-get-value($map, $key) {
 	@if map-has-key($map, $key) {
